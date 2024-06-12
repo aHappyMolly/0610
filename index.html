@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 符合行動裝置呈現 -->
+    <title>112-2網頁設計期末_蔡茉莉3112048001</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="animate.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="smooth-scroll.js" defer></script> <!-- 引入外部 JavaScript 文件 -->
+	<script src="start-switch1.js" defer></script>
+	<script src="wow.min.js"></script>
+	<script src="player_move.js" defer></script>
+	
+	 
+	<style>
+		body {
+			margin: 0;
+			background-color: #f1f1f1;
+			font-family: Arial, Helvetica, sans-serif;
+			overflow: auto;
+			}
+
+		#player {
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-size: cover;
+            background-image: url("素材/向下.gif"); /* 初始的GIF檔 */
+            background-repeat: no-repeat;
+			display: none; /* 初始隱藏 */
+			z-index: 900;
+			opacity: 0;
+    		transition: opacity 0.5s; /* 添加過渡效果 */
+			}
+	</style>
+</head>
+	
+	
+<body>
+	<div id="player"></div>
+	<div id="blood"  class="floating-Image" >
+		<img src="素材\blood.png" alt="Floating Image">
+	</div>
+	
+	
+	<div id="page0" class="parallax" >
+		<div class="page0_image">
+			<img src="素材\title1.png" alt="" id="title1" class="wow bounceInDown">
+			<img src="素材\btn_start_1.png" alt=""  id="imageB">
+			<img src="素材\btn_start_0.png" alt=""  id="imageA" class="wow fadeIn" data-wow-duration="1s" data-wow-delay="1s">
+
+			<img src="素材\向下.gif" alt=""  id="imageC">
+			<img src="素材\p0.2_導覽字.png" alt="" id="imageD">
+			<img src="素材\p0.2_箭頭.png" alt="" id="imageE">
+		</div>
+		
+        <div class="overlay-bar">
+            <div class="title_top">NCHU MAP</div>
+            <div class="links">
+                <a href="#story">起源故事</a>
+                <a href="#characters">角色介紹</a>
+                <a href="#territory">目前疆域</a>
+                <a href="#more-info">更多資訊</a>
+            </div>
+        </div>
+        <div class="glow-effect"></div>
+	</div>
+
+	
+	<div id="navbar" class="navbar" >
+	    <div class="dropdown">
+    		<button class="dropbtn">NCHU MAP
+      			<i class="fa fa-caret-down"></i>
+    		</button>
+			<div class="dropdown-content">
+			  <a href="#story">起源故事</a>
+			  <a href="#characters">角色介紹</a>
+			  <a href="#territory">目前疆域</a>
+			  <a href="#more-info">更多資訊</a>
+			</div>
+  		</div>
+	</div>
+
+	
+	
+	
+    <!-- page1~page4 開始 -->
+    <div id="story" class="fullscreen-div">
+        <h3 class="h3new">起源故事</h3>
+		<h6 class="h6new">Story of NCHU Map</h6>
+		<div class="item-container_story">
+            <img src="素材\鑰匙.GIF" alt="" class="left wow slideInLeft">
+			<p class="right wow slideInRight"> 肥宅尼尼因緣際會的來到了中興大學就讀，<br>
+				學校真的超級大的！<br>
+				在文創系的第一年，也遇到了許多不同類型的人呢..<br>
+				跟著阿尼的腳步一起探索中興大學吧～
+			</p>
+        </div>
+	</div>
+	
+	
+	
+    <div id="characters" class="parallax">
+        <h3 class="h3new">角色介紹</h3>    
+        <h6 class="h6new">Characters in NCHU</h6>
+        <div class="item-container_characters">
+        	<div class="flip-card" id="cardA">
+				<div class="img wow fadeIn">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="素材/card_ni_正面.PNG" alt="">
+                    </div>                
+                    <div class="flip-card-back">
+                        <img src="素材/card_ni_背面.PNG" alt="">
+                    </div>
+                </div>
+				</div>	
+            </div>
+            <div class="flip-card" id="cardB">
+				<div class="img wow fadeIn">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="素材/card_goose_正面.PNG" alt="">
+                    </div>                
+                    <div class="flip-card-back">
+                        <img src="素材/card_goose_背面.PNG" alt="">
+                    </div>
+				</div>	
+                </div>
+            </div>
+            <div class="flip-card" id="cardC">
+				<div class="img wow fadeIn">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="素材/card_secret_正面.PNG" alt="">
+                    </div>                
+                    <div class="flip-card-back">
+                        <img src="素材/card_secret_背面.PNG" alt="">
+                    </div>
+                </div>
+				</div>	
+            </div>
+        </div>
+    </div>
+		
+	
+	
+    <div id="territory" class="fullscreen-div">
+		<h3 class="h3new_vertical">目前疆域</h3>	
+			<h6 class="h6new_vertical">Territory of NCHU</h6>
+			<div class="item-container_territory">
+				 
+				<div class="building-com" id="MAP">
+					<div class="building-inner">
+						<div class="building">
+							<img id="building_MAP" src="素材/建築物/MAP.png" alt="" class="img wow bounceInUp" >
+						</div>                
+						  
+					</div>
+				</div>
+				<div class="building-com" id="door">
+					<div class="building-inner">
+						<div class="building">
+							<img id="building_door" src="素材/建築物/校門.png" alt="" class="img wow bounceInUp"  data-wow-delay="0.3s">
+						</div>                
+						
+					</div>
+				</div>
+				
+				<img id="building_HS" src="素材/建築物/惠蓀堂.png" alt="" class="img wow bounceInUp"  data-wow-delay="0.2s">
+				<img id="building_administration" src="素材/建築物/行政大樓.png" alt="" class="img wow bounceInUp" data-wow-delay="0.3s">
+				<img id="building_forest" src="素材/建築物/黑森林.png" alt="" class="img wow bounceInUp" data-wow-delay="0.3s">
+				<img id="building_WN" src="素材/建築物/萬年樓.png" alt="" class="img wow bounceInUp" data-wow-delay="0.5s">
+				<img id="building_humanities" src="素材/建築物/人文大樓.png" alt="" class="img wow bounceInUp"  data-wow-delay="0.2s">
+				<img id="building_mos" src="素材/建築物/摩斯.png" alt="" class="img wow bounceInUp"  data-wow-delay="0.4s">
+				<img id="building_social" src="素材/建築物/社管大樓.png" alt="" class="img wow bounceInUp"  data-wow-delay="0.2s">
+				<img id="building_complex" src="素材/建築物/綜合大樓.png" alt="" class="img wow bounceInUp"  data-wow-delay="0.3s">
+				<img id="building_Lib" src="素材/建築物/圖書館.png" alt="" class="img wow bounceInUp"  data-wow-delay="0.5s">
+				<img id="building_lake" src="素材/建築物/中興湖.png" alt="" class="img wow bounceInUp"  data-wow-delay="0.1s">
+				<img id="building_resterant" src="素材/建築物/圓廳.png" alt="" class="img wow bounceInUp"  data-wow-delay="0.5s">
+        	</div>
+				
+	</div>
+	
+	
+	
+    <div id="more-info" class="parallax">
+		<h3 class="h3new">更多資訊</h3>	
+        <h6 class="h6new">More Information</h6>
+        <div class="item-container_more-info">
+            <a href="https://reurl.cc/Ejgyaa" target="_blank" class="wow bounceIn" data-wow-delay="0.5s"> <!-- target="_blank" 用於在新的瀏覽器窗口中打開連結 -->
+                <img src="素材\Instagram_icon.png" alt="">
+				<span class="tooltip">Instagram</span>
+            </a>
+
+            <a href="https://reurl.cc/1vXEpQ" target="_blank" class="wow bounceIn" > 
+                <img src="素材\map_icon.png" alt="">
+				<span class="tooltip">Map</span>
+            </a>
+
+            <a href="https://reurl.cc/KeO0Ee" target="_blank" class="wow bounceIn" data-wow-delay="0.3s"> <!-- target="_blank" 用於在新的瀏覽器窗口中打開連結 -->
+                <img src="素材\unity_icon.png" alt="">
+				<span class="tooltip">Unity</span>
+            </a>
+
+            <a href="mailto:o0939876776@gmail.com" target="_blank" class="wow bounceIn" data-wow-delay="0.6s">
+                <img src="素材\gmail_icon.png" alt="">
+				<span class="tooltip">Email</span>
+            </a>
+        </div>
+	</div>
+	
+	
+<div class="footer">
+    <p>版權所有</p>
+</div>
+
+
+	<script>
+	new WOW().init();
+	</script>
+	
+	<script>
+	// 當用戶滾動到文件頂部 20px 以內時，顯示導航欄
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("navbar").style.bottom = "0";
+        } else {
+            document.getElementById("navbar").style.bottom = "-50px";
+        }}
+	</script>
+	
+	<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // 目標元素
+    const target = document.getElementById('building_MAP');
+
+    // 回調函數
+    function animateOnScroll(entries, observer) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // 當元素進入視窗時，添加動畫類別
+          target.classList.add('animate__animated', 'animate__bounceInUp');
+          // 停止觀察
+          observer.unobserve(target);
+        }
+      });
+    }
+
+    // 創建Intersection Observer
+    const observer = new IntersectionObserver(animateOnScroll, {
+      threshold: 0.5  // 元素有10%可見時觸發回調
+    });
+
+    // 開始觀察目標元素
+    observer.observe(target);
+  });
+</script>
+
+
+	
+
+</body>
+</html>
